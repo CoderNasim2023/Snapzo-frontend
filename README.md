@@ -1,5 +1,8 @@
 # Snapzo Frontend part 
 
+<img width="500" height="212" alt="image" src="https://github.com/user-attachments/assets/3f362136-e614-491e-b55c-66c6f15f0916" />
+
+
 Snapzo is a React-based food ordering frontend built with Vite. Users can browse meals, add items to a cart, sign in, place orders with cash on delivery or Stripe, and view their previous orders.
 
 ## Features
