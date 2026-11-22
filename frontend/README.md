@@ -1,12 +1,98 @@
-# React + Vite
+# Snapzo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Snapzo is a React-based food ordering frontend built with Vite. Users can browse meals, add items to a cart, sign in, place orders with cash on delivery or Stripe, and view their previous orders.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse food categories and available meals
+- Add and remove items from the shopping cart
+- User sign-in and token-based authentication
+- Delivery information and order checkout
+- Cash on delivery and Stripe payment options
+- Order history and order verification
+- Responsive layout with toast notifications
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- React Router
+- Vite
+- Axios
+- React Toastify
+- CSS
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- The Snapzo backend API running on `http://localhost:4000`
+
+### Installation
+
+```bash
+git clone https://github.com/CoderNasim2023/Snapzo-frontend.git
+cd Snapzo-frontend/frontend
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown by Vite, usually `http://localhost:5173`.
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+
+## Application Routes
+
+| Route | Page |
+| --- | --- |
+| `/` | Home and food menu |
+| `/cart` | Shopping cart |
+| `/order` | Checkout and payment |
+| `/myorders` | Order history |
+| `/verify` | Order/payment verification |
+
+## Backend Integration
+
+The frontend currently uses `http://localhost:4000` as the backend base URL. Start the backend before using authentication, cart synchronization, food-list loading, or order placement. The frontend communicates with endpoints under:
+
+```text
+/api/food/list
+/api/user/*
+/api/cart/*
+/api/order/*
+```
+
+## Project Structure
+
+```text
+frontend/
+├── public/                 # Public assets
+├── src/
+│   ├── assets/             # Images and shared asset references
+│   ├── components/         # Navbar, footer, pages, and UI components
+│   ├── Context/            # Global cart, menu, and authentication state
+│   ├── App.jsx             # Application routes and global UI
+│   └── main.jsx            # React entry point
+├── package.json
+└── vite.config.js
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+The optimized files are generated in the `dist/` directory.
