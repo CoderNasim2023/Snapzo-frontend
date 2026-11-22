@@ -1,7 +1,7 @@
-import { useContext, useState} from "react";
+import { useContext } from "react";
+import { StoreContext } from "../Context/StoreContext";
 import { assets } from "../assets/assets";
 import "./FoodItem.css";
-import { StoreContext} from "../Context/StoreContext.jsx";
 
 const FoodItem = ({id,name,price,description,image}) => {
   // its calls useState variable

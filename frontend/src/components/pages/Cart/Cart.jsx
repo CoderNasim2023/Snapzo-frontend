@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./Cart.css";
 import { assets } from "../../../assets/assets";
 import { useNavigate } from "react-router-dom";
-import { StoreContext } from "../../../Context/StoreContext.jsx";
+import { StoreContext } from "../../../Context/StoreContext";
 
 const Cart = () => {
   const navigate= useNavigate();
@@ -21,7 +21,7 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
+        {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
             return (
               <div key={item._id}>

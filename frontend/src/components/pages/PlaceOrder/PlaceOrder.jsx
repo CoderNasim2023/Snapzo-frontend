@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { assets } from "../../../assets/assets";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { StoreContext } from "../../../Context/StoreContext.jsx";
+import { StoreContext } from "../../../Context/StoreContext";
 
 const PlaceOrder = () => {
   const [payment, setPayment] = useState("cod");
@@ -86,7 +86,7 @@ const PlaceOrder = () => {
     } else if (getTotalCartAmount() === 0) {
       navigate("/cart");
     }
-  }, [token]);
+  }, [getTotalCartAmount, navigate, token]);
 
   return (
     <form onSubmit={placeOrder} className="place-order">

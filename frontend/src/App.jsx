@@ -6,7 +6,7 @@ import Cart from "./components/pages/Cart/Cart.jsx";
 import PlaceOrder from "./components/pages/PlaceOrder/PlaceOrder.jsx";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MyOrders from "./components/pages/MyOrders/MyOrders.jsx";
 import Verify from "./components/pages/Verify/Verify.jsx";
